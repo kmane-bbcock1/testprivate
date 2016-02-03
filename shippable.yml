@@ -14,18 +14,11 @@ env:
     - M1=one
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/sample_node_pvt .
-
-  pre_ci_boot:
-    image_name: shippabledocker/sample_node_pvt
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
+  
   ci:
     - ps -eax
     - ls -al
+    - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
   post_ci:
     - docker push shippabledocker/sample_node_pvt
@@ -53,7 +46,7 @@ integrations:
           recipients:
             - "#builds-vr"
             - pvt2
-          on_start: always
+          on_success: always
           on_failure: always
           #on_failure: always
     
@@ -61,6 +54,6 @@ integrations:
           type: irc
           recipients:
             - "chat.freenode.net#hitchcock2-irc"
-          on_start: always
+          on_success: always
           on_failure: always
          
