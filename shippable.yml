@@ -33,7 +33,33 @@ build:
 integrations:
   hub:
     - integrationName: ship-docker
-      type: docker
+      type: private docker registry
       branches:
         only:
           - master
+  notifications:
+        - integrationName: email
+          type: email
+          recipients:
+            - vidya@shippable.com
+            - shiphitchcock2@gmail.com
+          on_success: always
+          on_failure: always 
+          on_start: always
+          
+        - integrationName: ship-slack
+          type: slack
+          recipients:
+            - "#builds-vr"
+            - pvt2
+          on_success: always
+          on_start: always
+          on_failure: always 
+        - integrationName: irc
+          type: irc
+          recipients:
+            - "chat.freenode.net#hitchcock2-irc"
+          on_success: always
+          on_failure: always 
+          on_start: always
+
