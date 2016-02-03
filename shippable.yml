@@ -56,7 +56,7 @@ integrations:
         - integrationName: irc
           type: irc
           recipients:
-            - "chat.freenode.net#hitchcock-irc"
+            - "chat.freenode.net#hitchcock2-irc"
           on_success: always
           on_failure: always 
           on_start: always
