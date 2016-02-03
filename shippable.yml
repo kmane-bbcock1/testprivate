@@ -71,6 +71,6 @@ integrations:
             only:
                 - master
                 - dev
-          on_success: change
+          on_success: always
           on_failure: change
          
