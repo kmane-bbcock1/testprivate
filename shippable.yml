@@ -32,7 +32,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: ship-docker
+    - integrationName: ship-pdr
       type: private docker registry
       branches:
         only:
