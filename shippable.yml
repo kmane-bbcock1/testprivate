@@ -60,5 +60,4 @@ integrations:
           recipients:
             - "chat.freenode.net#hitchcock2-irc"
            on_start: always
-          on_failure: always
          
