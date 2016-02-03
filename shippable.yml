@@ -48,13 +48,13 @@ integrations:
           on_success: always
           on_failure: change
          
-          
-          
+   
         - integrationName: ship-slack
           type: slack
           recipients:
             - "#builds-vr"
             - pvt2
+            - prod
           branches:
             only:
                 - master
