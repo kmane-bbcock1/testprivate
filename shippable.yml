@@ -41,18 +41,22 @@ integrations:
           type: email
           recipients:
             - vidya@shippable.com
+            - shiphitchcock2@gmail.com
           on_success: always
           on_failure: always 
+          on_success: always
           
         - integrationName: ship-slack
           type: slack
           recipients:
-            - "#public-chnl"
+            - "#builds-vcr"
+          on_success: always
           on_success: always
           on_failure: always 
         - integrationName: irc
           type: irc
           recipients:
-            - "chat.freenode.net#test-irc"
+            - "chat.freenode.net#hitchcock-irc"
           on_success: always
           on_failure: always 
+          on_start: always
