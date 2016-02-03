@@ -43,7 +43,8 @@ integrations:
           recipients:
             - vidya@shippable.com
             - shiphitchcock2@gmail.com
-          on_start: always
+          on_success: always
+          on_failure: always
          
           
           
@@ -53,6 +54,7 @@ integrations:
             - "#builds-vr"
             - pvt2
           on_start: always
+          on_failure: always
           #on_failure: always
     
         - integrationName: irc
@@ -60,4 +62,5 @@ integrations:
           recipients:
             - "chat.freenode.net#hitchcock2-irc"
           on_start: always
+          on_failure: always
          
