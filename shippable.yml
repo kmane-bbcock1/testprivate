@@ -35,6 +35,30 @@ integrations:
   hub:
     - integrationName: ship-docker
       type: docker
-      branches:
-        only:
-          - master
+  integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker
+     # branches:
+      #  only:
+       #   - master
+  notifications:
+        - integrationName: email
+          type: email
+          recipients:
+            - vidya@shippable.com
+          on_success: always
+          on_failure: always 
+          
+        - integrationName: ship-slack
+          type: slack
+          recipients:
+            - "#public-chnl"
+          on_success: always
+          on_failure: always 
+        - integrationName: irc
+          type: irc
+          recipients:
+            - "chat.freenode.net#test-irc"
+          on_success: always
+          on_failure: always 
