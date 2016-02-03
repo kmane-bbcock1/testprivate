@@ -37,6 +37,10 @@ integrations:
           recipients:
             - vidya@shippable.com
             - shiphitchcock2@gmail.com
+          branches:
+            only:
+                - master
+                - dev
           on_success: always
           on_failure: change
          
@@ -47,6 +51,10 @@ integrations:
           recipients:
             - "#builds-vr"
             - pvt2
+          branches:
+            only:
+                - master
+                - dev
           on_success: always
           on_failure: change
           #on_failure: always
@@ -55,6 +63,10 @@ integrations:
           type: irc
           recipients:
             - "chat.freenode.net#hitchcock2-irc"
+          branches:
+            only:
+                - master
+                - dev
           on_success: always
           on_failure: change
          
