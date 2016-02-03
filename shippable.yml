@@ -35,13 +35,7 @@ integrations:
   hub:
     - integrationName: ship-docker
       type: docker
-  integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-     # branches:
-      #  only:
-       #   - master
+  
   notifications:
         - integrationName: email
           type: email
