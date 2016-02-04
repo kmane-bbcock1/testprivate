@@ -4,8 +4,8 @@ language: node_js
 # Version number
 node_js:
   - "0.12"
-  - 0.10
-
+  - "0.10"
+  
 env:
   global:
     - FOO=FUBU
@@ -61,8 +61,7 @@ integrations:
                 - dev
           on_success: change
           on_failure: always
-          #on_failure: always
-    
+          
         - integrationName: irc
           type: irc
           recipients:
