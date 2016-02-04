@@ -31,45 +31,33 @@ build:
 integrations:
   hub:
     - integrationName: ship-docker
-      type: docker 
-      branches:
-        only:
-          - master
+      type: docker
   notifications:
-        - integrationName: email
-          type: email
-          recipients:
-            - vidya@shippable.com
-            - shiphitchcock2@gmail.com
-          branches:
-            only:
-                - master
-                - dev
-          on_success: change
-          on_failure: always
-         
-   
-        - integrationName: ship-slack
-          type: slack
-          recipients:
-            - "#builds-vr"
-            - pvt2
-            - prod
-          branches:
-            only:
-                - master
-                - dev
-          on_success: change
-          on_failure: always
-          
-        - integrationName: irc
-          type: irc
-          recipients:
-            - "chat.freenode.net#hitchcock2-irc"
-          branches:
-            only:
-                - master
-                - dev
-          on_success: change
-          on_failure: always
-         
+    - integrationName: email
+      type: email
+      recipients: 
+        - shiphitchcock1@gmail.com
+        #- varsha@shippable.com
+      on_pr: success
+      on_start:
+      on_success: always
+      on_failure: always
+
+    - integrationName: ship-slack
+      type: slack
+      recipients: 
+        - "#hitchcock1-public"
+        - pvt-channel
+      on_pr: success
+      on_start:
+      on_success: always
+      on_failure: always
+ 
+    - integrationName: irc
+      type: irc
+      recipients: 
+        - "chat.freenode.net#test-cock"
+      on_pr: success
+      on_start:
+      on_success: always
+      on_failure: always
