@@ -23,7 +23,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi
+    - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
   #post_ci:
    # - docker push shippabledocker/sample_node_pvt
@@ -46,8 +46,8 @@ integrations:
             only:
                 - master
                 - dev
-          on_success: always
-          on_failure: change
+          on_success: change
+          on_failure: always
          
    
         - integrationName: ship-slack
@@ -60,8 +60,8 @@ integrations:
             only:
                 - master
                 - dev
-          on_success: always
-          on_failure: change
+          on_success: change
+          on_failure: always
           
         - integrationName: irc
           type: irc
@@ -71,6 +71,6 @@ integrations:
             only:
                 - master
                 - dev
-          on_success: always
-          on_failure: change
+          on_success: change
+          on_failure: always
          
