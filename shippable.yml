@@ -25,8 +25,8 @@ build:
     - ls -al
     - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi
 
-  post_ci:
-    - docker push shippabledocker/sample_node_pvt
+  #post_ci:
+   # - docker push shippabledocker/sample_node_pvt
     
 
 integrations:
