@@ -3,30 +3,35 @@ language: node_js
 
 # Version number
 node_js:
-  - "0.12"
-  - "0.10"
+  - 0.10.25
+  - 4.2.0
+
+services:
+  - selenium
+  - mysql
+  - postgres
+  - "mongo"
   
-env:
-  global:
-    - FOO=FUBU
-
-  matrix:
-    - M1=one
-
-matrix:
- allow_failures:
-   - node_js: "0.10"
-   
 build:
-  
+  #pre_ci:
+   # - docker build -t=shippabledocker/sample_node .
+
+  pre_ci_boot:
+    image_name: shippable/minv2
+    image_tag: latest
+    pull: true
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+
   ci:
     - ps -eax
     - ls -al
-    - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
+    - echo $M1
+    - echo $key1 and $key2 and $key3
 
-  #post_ci:
-   # - docker push shippabledocker/sample_node_pvt
-    
+ # post_ci:
+  #  - docker push shippabledocker/sample_node
+
+
 
 integrations:
   hub:
