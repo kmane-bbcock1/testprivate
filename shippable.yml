@@ -15,14 +15,14 @@ env:
    -  M1=one
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/sample_node_pvt .
+ # pre_ci:
+  #  - docker build -t=shippabledocker/sample_node_pvt .
 
   pre_ci_boot:
-    image_name: shippabledocker/sample_node_pvt
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+   # image_name: shippabledocker/sample_node_pvt
+    #image_tag: latest
+    #pull: false
+    #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
@@ -32,9 +32,9 @@ build:
   #  - docker push shippabledocker/sample_node_pvt
 
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: private docker registry
+  #hub:
+   # - integrationName: ship-docker
+    #  type: private docker registry
   
   notifications:
         - integrationName: email
