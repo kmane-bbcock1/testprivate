@@ -25,7 +25,7 @@ before_script:
 notifications:
  email:
    recipients:
-     - "vidya@shippable.com"
+     - "revathi@shippable.com"
    on_success: always
    on_failure: always
  irc:
