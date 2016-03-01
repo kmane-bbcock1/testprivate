@@ -9,9 +9,11 @@ node_js:
 env:
   global:
     - FOO=FUBU
+    - secure: fxNqq9ydnaZ0XZlurWkybbHYd53hHKz9EouUghQED/6trZCNn0KRA6OYrdWP8g47+Z+jWwwtJ6Vn1YYAZ1NQIKSp0HPQukEDjf6ET0AhebkXnVekhMFIrUaCGJGvZ4ol+WR7N0ByvV5l2kw9DT6cIQJQMMc0KJjOB6UjqSU3dqhWC8urYkseLz3qjxE0RCdZNnCxvSp95LcO8igmHCcpWaI5Lf+pNDbCEvIjPaT4xrRZGwjLyvjCSUFvPWEri+ZgQXZHd/9kWFkXzDFzEu15pqtSOD94OIOHT2wXQ/bnIxZyumq0v4hUuMgmEb+JMizvdmu864PjuFYzrdPSt04KoQ==
 
   matrix:
    -  M1=one
+   - secure: w5y+GQAHTipoHXQBg0UMX4a5ZGzz50UXPl0gsj1lkcA6u0ymWifkNPC6a8u2bUFTOVXwvjx0aQN9eaS4aByrhE4uPDT/BDulbtBJ7CVyGxZJSjWdzvfL4etz9cybRXIqc7spDkSjyU/zSQsmHxoVNeeGqHlPCW9/8pjsIb+eY/wurF6NPZkHMi2uc+rc03lfPHbNcfR+cVJ5mKl2bXgtlqqRfqp9Z2NiR5iblFa6F8k3tY/IvM0cQQqmK3xqnbHKbiRhuM48OxbB2TYkgchLqDNegfvhDb8+9rkpvIx6kqbq6qWEMlqAp8aSE5xx5bx1zAV7/9IuTbamJ+BjB1tcJg==
 
 build:
  # pre_ci:
@@ -26,6 +28,8 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - echo $key1 and $key2
+    
 
  # post_ci:
   #  - docker push shippabledocker/sample_node_pvt
