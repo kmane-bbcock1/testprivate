@@ -29,6 +29,7 @@ build:
     - ps -eax
     - ls -al
     - echo $key1 and $key2
+    - echo $M2
     
 
  # post_ci:
