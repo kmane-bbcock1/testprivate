@@ -49,7 +49,7 @@ integrations:
           recipients:
             - vidya@shippable.com
             - shiphitchcock2@gmail.com
-          on_success: change
+          on_success: always
           on_failure: always 
           on_start: always
           on_pull_request: always
@@ -59,7 +59,7 @@ integrations:
           recipients:
             - "#builds-vr"
             - pvt2
-          on_success: change
+          on_success: always
           on_start: always
           on_failure: always 
           on_pull_request: always
@@ -69,7 +69,7 @@ integrations:
           recipients:
             - "chat.freenode.net#hitchcock2-irc"
             - "chat.freenode.net#test-cock"
-          on_success: change
+          on_success: always
           on_failure: always 
           on_start: always
           on_pull_request: always
