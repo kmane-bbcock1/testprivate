@@ -15,11 +15,12 @@ env:
   # -  M1=one
    - secure: w5y+GQAHTipoHXQBg0UMX4a5ZGzz50UXPl0gsj1lkcA6u0ymWifkNPC6a8u2bUFTOVXwvjx0aQN9eaS4aByrhE4uPDT/BDulbtBJ7CVyGxZJSjWdzvfL4etz9cybRXIqc7spDkSjyU/zSQsmHxoVNeeGqHlPCW9/8pjsIb+eY/wurF6NPZkHMi2uc+rc03lfPHbNcfR+cVJ5mKl2bXgtlqqRfqp9Z2NiR5iblFa6F8k3tY/IvM0cQQqmK3xqnbHKbiRhuM48OxbB2TYkgchLqDNegfvhDb8+9rkpvIx6kqbq6qWEMlqAp8aSE5xx5bx1zAV7/9IuTbamJ+BjB1tcJg==
    - M2=two
+
 build:
  # pre_ci:
   #  - docker build -t=shippabledocker/sample_node_pvt .
 
-  pre_ci_boot:
+  #pre_ci_boot:
    # image_name: shippabledocker/sample_node_pvt
     #image_tag: latest
     #pull: false
