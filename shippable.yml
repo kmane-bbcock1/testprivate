@@ -15,6 +15,7 @@ env:
 
   matrix:
     - M1=one
+    - m2=two
 
 
 before_script:
