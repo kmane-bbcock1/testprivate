@@ -1,27 +1,39 @@
 # Language setting
 language: node_js
 
+
+
 # Version number
 node_js:
   - "0.12"
-  #- "0.10"
-  
-git:
- submodules: false
-  
+  - "0.11"
+
 env:
   global:
     - FOO=FUBU
-    - secure: bMud3EBGzFPDox1Ta76E4GbfFZ5BhTeHOmUkdI4XDZQhbKw1cDL7r6oqGOjdLePScwuErp0my4RoZJhH35nPbjBdYNpvq8rFfS8IHEuojGADaIQCQleUb6DQax2AAJ0Pw+iY4PgPlF/a6uEyNtoHljIFe67FB56obDPIOZBRKBpbuBzDWeFIY9Vs2oDbF5vgcvhnRt3aBq5UuhD1TrkoWjZwVyTnsW6V7kZ4aQeHI+JywmnaG+H05at1vVomfW6MMydNrdFHpV5UBZiktsDg/IaVy1wFFTDBye0rAQbPv8BFFVHUqUJcD+Y5PgD+Hez8Ai69zjNyGhr7zC/UDZT3+A==
-    - secure: mM7i1j2r6HTT9VRZWQNyBcA3NnseJ6VCrMyAK4Cmgm9bluoLkVtLz2oS0dlzqXFGHOPf+2WLuDpXtjP/MQdrKHmnnnD1blbpQ1ivFWhOXfXzcoop3vIyS244XLZxP7/ZXAKqzoGWu45K3ERuNNdN2cYYnjmM8hjDiZXKMafln07hYeIOYyl7nJVo09L8Uo+F0uKJAA8T8GGMOkrXlEpAKKUrQqM0CRTP2ItsPSGrd6N/2N+Ff5boo8r1czQbptdT8Esd/B9xJdlXJM/LxtxnqzaVRyksmNTb33mfcvMafiGaa4fz9P3SA4G3usftTJ1NmkZR12ywGEcMvcerfKGPzg==
-    - secure: BdMemtD4onuoEwXAhmE0umkJ+0YSp9/ZXhdQoTY+bKfH5YY7lfYju9F4SEu4Mu5x92t5Is+NPoK81HZ/0RCMok+NjbMqt4JydyxEy1FOfLtn8+QEk1n1PmvY++yhOsVl2ghVqRMZQNwLAT5sOnMtFp5zcFa/qiydIchva+gVdGrTX3jJEvEYTAUSSMfzzw+GaHg/VJypfxolevoAu6TpVilBh/uXIv+gjuqpZJJs806ADqQ1dUjiW/JJeqg7syAWZKOCeaoU+V54DC44Vbc43Dk+6xi5apCtP6Jtc9buPDM8UpCAtnKZqx+cHAZc27b+M5RwVuTzkZMVAXEDnAJyCg==
-   # - secure: ZmhTNoyBi9ELh/1Gd1huAbuI9+Yt7yM5mOSGQNTX+s9rmJVlgWhc0wTjQkIX2stl2bSx6fG1WWpjOp9FxRbKbDxKMZKpalTiGVsThtxpRauVhkSQuAe68KPUjNA/YMEs/+SFGUHvJoA54+GFxZKn4ph6PzrJVIIvvjwCVC9MsXnP6JuLMGu1kHhrFT07jI9ZGyA4BIFosPgv23z+hHoSQr/H/Q5CExmzw5zEhT1yKaOp2kZrdR2648XbWefTHgyy+5V8NEI9C8dk3cAhxBSO5+p7saJolhpiPnyMCkStESmpVY9RA4XSZl+CbwHLdi44U1tFSPVBpW13ncYDusyv5A==
 
   matrix:
     - M1=one
-    #- m2=two
-
 
 build:
- ci:
-  - echo $key1 and $key2 and $key4
+  pre_ci:
+    - docker build -t=shippabledocker/sample-node-test .
+
+  pre_ci_boot:
+    image_name: shippabledocker/sample-node-test
+    image_tag: latest
+    pull: false
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+
+
+  ci:
+    - ps -eax
+    - ls -al
+
+  post_ci:
+    - docker push shippabledocker/sample-node-test
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker
