@@ -3,8 +3,8 @@ language: node_js
 
 # Version number
 node_js:
-  #- "0.12"
-  - "0.10"
+  - "0.12"
+  #- "0.10"
   
 git:
  submodules: false
@@ -22,19 +22,6 @@ env:
     #- m2=two
 
 
-before_script:
+build:
+ ci:
   - echo $key1 and $key2 and $key4
-  
-#after_success:
- #- if [ "$IS_PULL_REQUEST" != true ]; then docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/vidya1-repo1; fi
-   
-notifications:
- email:
-   recipients:
-     - "vidya@shippable.com"
-   on_success: always
-   on_failure: always
- irc:
-   pull_requests: true
-   channels:  
-    - "chat.freenode.net#test-irc"
