@@ -14,7 +14,8 @@ env:
     - FOO=FUBU
 
   matrix:
-    - M1=one
+    - M1="111"
+    - M2=two
 
 build:
   pre_ci:
