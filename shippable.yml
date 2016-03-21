@@ -3,8 +3,8 @@ language: node_js
 
 # Version number
 node_js:
-  #- "0.12"
-  - "0.10"
+  - "0.12"
+  #- "0.10"
 
   
 #env:
@@ -17,6 +17,7 @@ node_js:
 
 before_script:
   - echo $key1
+ 
   
 after_success:
  - if [ "$IS_PULL_REQUEST" != true ]; then docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/vidya1-repo1; fi
