@@ -12,8 +12,8 @@ node_js:
     #- FOO=FUBU
   #  - secure: ZmhTNoyBi9ELh/1Gd1huAbuI9+Yt7yM5mOSGQNTX+s9rmJVlgWhc0wTjQkIX2stl2bSx6fG1WWpjOp9FxRbKbDxKMZKpalTiGVsThtxpRauVhkSQuAe68KPUjNA/YMEs/+SFGUHvJoA54+GFxZKn4ph6PzrJVIIvvjwCVC9MsXnP6JuLMGu1kHhrFT07jI9ZGyA4BIFosPgv23z+hHoSQr/H/Q5CExmzw5zEhT1yKaOp2kZrdR2648XbWefTHgyy+5V8NEI9C8dk3cAhxBSO5+p7saJolhpiPnyMCkStESmpVY9RA4XSZl+CbwHLdi44U1tFSPVBpW13ncYDusyv5A==
 
-  matrix:
-    - M1=one
+  #matrix:
+   # - M1=one
 
 before_script:
   - echo $key1
