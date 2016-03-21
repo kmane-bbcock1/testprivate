@@ -19,8 +19,8 @@ before_script:
   - echo $key1
  
   
-after_success:
- - if [ "$IS_PULL_REQUEST" != true ]; then docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/vidya1-repo1; fi
+#after_success:
+ #- if [ "$IS_PULL_REQUEST" != true ]; then docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/vidya1-repo1; fi
    
 notifications:
  email:
