@@ -16,7 +16,7 @@ env:
 
   matrix:
     - M1="111"
-    - M2=two and three
+    #- M2=two and three
 
 build:
   pre_ci:
