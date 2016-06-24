@@ -34,6 +34,7 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE
     - echo $key1
    # - sleep 5m
 
