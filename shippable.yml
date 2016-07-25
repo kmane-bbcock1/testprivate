@@ -49,7 +49,7 @@ integrations:
           recipients:
             - vidya@shippable.com
             - shiphitchcock2@gmail.com
-          on_success: always
+          on_success: change
           on_failure: always 
           on_start: always
           on_pull_request: always
@@ -59,7 +59,7 @@ integrations:
           recipients:
             - "#builds-vr"
             - pvt2
-          on_success: always
+          on_success: change
           on_start: always
           on_failure: always 
           on_pull_request: always
@@ -80,7 +80,7 @@ integrations:
             - "#pvt-room"
             - "@shiphitchcock2"
       
-          on_start: always
+          on_start: change
           on_pull_request: always
           on_success: always
           on_failure: always
