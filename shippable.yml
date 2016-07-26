@@ -51,7 +51,7 @@ integrations:
             - shiphitchcock2@gmail.com
           on_success: change
           on_failure: always 
-          on_start: always
+          on_start: never
           on_pull_request: always
           
         - integrationName: ship-slack
@@ -60,7 +60,7 @@ integrations:
             - "#builds-vr"
             - pvt2
           on_success: change
-          on_start: always
+          on_start: never
           on_failure: always 
           on_pull_request: always
           
@@ -70,7 +70,7 @@ integrations:
             - "chat.freenode.net#hitchcock2-irc"
             - "chat.freenode.net#test-cock"
           on_success: always
-          on_failure: always 
+          on_failure: never
           on_start: always
           on_pull_request: always
           
@@ -80,8 +80,8 @@ integrations:
             - "#pvt-room"
             - "@shiphitchcock2"
       
-          on_start: change
-          on_pull_request: always
+          on_start: never
+          on_pull_request: never
           on_success: always
           on_failure: always
 
