@@ -33,7 +33,7 @@ build:
     - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE
     - echo $foo
     - echo $env1
-   # - sleep 5m
+    - sleep 10m
 
   
       
