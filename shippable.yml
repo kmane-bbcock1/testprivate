@@ -31,7 +31,7 @@ build:
     - ls -al
     - echo $key1 and $key2
     - echo $M2
-    
+    - sleep 8m
     
     
 
