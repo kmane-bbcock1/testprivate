@@ -54,7 +54,7 @@ integrations:
           on_start: always
           on_pull_request: always
           
-        - integrationName: test-slack
+        - integrationName: ship-slack1
           type: slack
           recipients:
             - "#builds-vr"
@@ -74,7 +74,7 @@ integrations:
           on_start: always
           on_pull_request: always
           
-        - integrationName: test-hipchat
+        - integrationName: ship-hipchat1
           type: hipchat
           recipients: 
             - "#pvt-room"
