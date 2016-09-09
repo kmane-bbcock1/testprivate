@@ -51,16 +51,16 @@ integrations:
             - shiphitchcock2@gmail.com
           on_success: always
           on_failure: always 
-          on_start: never
+          on_start: always
           on_pull_request: always
           
-        - integrationName: ship-slack
+        - integrationName: test-slack
           type: slack
           recipients:
             - "#builds-vr"
             - pvt2
           on_success: always
-          on_start: never
+          on_start: always
           on_failure: always 
           on_pull_request: always
           
@@ -74,13 +74,13 @@ integrations:
           on_start: always
           on_pull_request: always
           
-        - integrationName: ship-hipchat
+        - integrationName: test-hipchat
           type: hipchat
           recipients: 
             - "#pvt-room"
             - "@shiphitchcock2"
       
-          on_start: never
+          on_start: always
           on_pull_request: never
           on_success: always
           on_failure: always
