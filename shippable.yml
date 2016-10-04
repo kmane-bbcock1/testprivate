@@ -33,6 +33,3 @@ build:
     - echo $foo
     - echo $env1
    # - sleep 15m
-
-  
-       
