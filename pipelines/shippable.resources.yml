@@ -42,7 +42,7 @@ resources:
     type: gitRepo
     integration: "github"
     pointer:
-      sourceName: "shiphitchcock1/sample_script"
+      sourceName: "shiphitchcock1/sample-script"
       branch: master
       #tags:
        # only:
