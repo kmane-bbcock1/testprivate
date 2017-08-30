@@ -8,7 +8,7 @@ git:
 node_js:
   - 8.1
   - 8.2
-  - 6.11
+  #- 6.11
 
 env:
   matrix:
@@ -19,4 +19,6 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE  
+    - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE 
+    
+  cache: true
