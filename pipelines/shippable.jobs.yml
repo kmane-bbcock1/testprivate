@@ -1,0 +1,131 @@
+jobs:
+
+#  - name: dryrun-pl_runCI
+  #  type: runCI
+  #  steps:
+   #   - IN: dryrun-pl_ciRepo
+    #flags:
+    #  - dryrun-pl_runCI
+    #  - dryrun-pl_runCInotEnabledFromCIbutAddedInJobsYml
+
+#RELEASE      
+  - name: ri-release
+    type: release
+    allowPublicAccess: true
+    steps:
+      - IN: ri-version
+         #versionName: testrelease
+      - IN: ri-inrunSh
+      - TASK: managed
+        bump: rc
+       #- IN: ri-tg3
+  #  flags:
+     # - ri-release
+    on_start:
+      - NOTIFY: ri-email
+      - NOTIFY: ri-slack
+       #- NOTIFY: allpl-irc
+    on_success:
+      - NOTIFY: ri-email
+      - NOTIFY: ri-slack
+       #- NOTIFY: allpl-irc
+    on_failure:
+      - NOTIFY: ri-email
+      - NOTIFY: ri-slack
+
+#MANIFESTS
+      
+  - name: ri-manifest1
+    type: manifest
+    steps:
+      - IN: ri-image1
+      # versionNumber: 100
+      - IN: ri-image2invalidimg
+      #- OUT: ri-image4invalidformat
+      - IN: ri-tg1
+    on_always:
+      - NOTIFY: ri-email
+      - NOTIFY: ri-slack
+    allowPublicAccess: true
+
+#DEPLOY  
+  - name: ri-ddcdeploy
+    type: deploy
+    allowPublicAccess: true
+    steps:
+      - IN: ri-ddccluster
+      - IN: ri-manifest1
+        switch: off
+      - IN: ri-params
+      - IN: ri-dopts
+      - IN: ri-replica2
+        #versionNumber: 1000      
+    on_start:
+      - NOTIFY: ri-email
+      - NOTIFY: ri-slack
+      #- NOTIFY: allpl-irc
+    on_success:
+      - NOTIFY: ri-email
+      - NOTIFY: ri-slack
+      #- NOTIFY: allpl-irc
+    on_failure:
+      - NOTIFY: ri-email
+      - NOTIFY: ri-slack
+   # flags:
+    #  - ar-ddcdeploy
+      
+#RUNSH      
+  - name: ri-inrunSh
+    type: runSh
+    allowPublicAccess: false
+    steps:
+      - IN: ri-samplescriptprivate
+     # versionName: testsha
+      - IN: ri-image3invalidtag
+      - IN: ri-tg2
+      - TASK:
+        - script: ls
+        - script: ./IN/ri-samplescriptprivate/gitRepo/echo.sh
+        #- script: echo "https://google.com"
+       # - script: echo "$GITHUB"
+       # - script: echo "bitbucket org https://bitbucket.org"
+       # - script: echo "build link $buildLink"
+       # - script: echo $Google
+       # - script: echo "$SHIPPABLE"
+      - OUT: ri-image2invalidimg
+    on_start:
+      - NOTIFY: ri-slack
+      - NOTIFY: ri-email
+    on_success:
+      - NOTIFY: ri-slack
+      - NOTIFY: ri-email
+      - script: echo 'infra test'
+      - script: echo 'newtesting success'
+    on_failure:
+      - script: echo 'testing1 failure'
+      - script: echo 'failure runSh'
+      - NOTIFY: ri-slack
+      - NOTIFY: ri-email
+
+      
+#RUNCLI      
+  - name: ri-inrunCLI
+    type: runCLI
+    allowPublicAccess: false
+    steps:
+      - IN: ri-samplescriptpublic
+      # versionName: testsha
+      - IN: ri-dh-cli
+      - IN: ri-testtime
+      - IN: ri-lb
+      - IN: ri-files
+      - TASK:
+        - script: ls
+        - script: ./IN/ri-samplescriptpublic/gitRepo/echo.sh
+
+        
+#PROVISION
+  - name: ri-provision                                                  #required
+    type: provision                                                  #required
+    steps:
+      - IN: ri-files 
