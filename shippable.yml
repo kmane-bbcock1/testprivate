@@ -22,3 +22,49 @@ build:
     - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE 
     
   cache: true
+
+integrations:    
+  notifications:
+    - integrationName: slack 
+      type: slack
+      recipients:
+        - "#random" 
+        - "#rc-public" 
+        - "#rc-private"
+      on_start: always
+      on_success: always
+      on_failure: always 
+      on_cancel: always
+       
+    - integrationName: email         
+      type: email        
+      recipients:  
+        - shiptest.rc.ow@gmail.com
+        - shiptest.rc.me@gmail.com
+     # sendConsoleLogs : true
+     # sendCoverageReports : true
+      on_start: always
+      on_success: always 
+      on_failure: always 
+      on_cancel: always
+     
+    - integrationName: irc  
+      type: irc
+      recipients:
+        - "webchat.irchighway.net#irc-three"
+        - "webchat.irchighway.net#test-rc"
+      on_start: always
+      on_success: always      
+      on_failure: always 
+      on_cancel: always
+    
+    - integrationName: hipchat
+      type: hipchat
+      recipients: 
+        - '#rc-private'
+        - '#rc-public'
+        - '@shiptestrcow'
+      on_start: always
+      on_success: always   
+      on_failure: always
+      on_cancel: always
