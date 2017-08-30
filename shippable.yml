@@ -6,21 +6,11 @@ git:
  
 # Version number
 node_js:
-  - "0.12"
- # - "0.11"
-
-env:
-  global:
-   # - FOO=FUBU
-    - secure: Zu1cM2mgqp4++9xW1ZdTmvb7xVPUZtDFJXU63OLmgI7j40xx/DRUOT/sYOxLgUdpcCKDIExtm2Fuq6FFQJDz1v10WaANxkMeubn2Zrv/fveid+zE6pTQfbCOsfnuyLhP00bnwGjxo/jswUIB+psfbiEZDUhisLUklxGHUM9iAsIwxk5nFIgOiUQpJnIXYCmYMWvr/1Zy8N2RslzOPNY5kWPDXoSmRNWJcCTw1S6LilMRt5ke7ISliTFKz7J3QgTwIoydq1691PfseLwZzD5S3L6pABIhQ9nO3c6qPX/53wXAp+xHAupa1Me86wm8htE5cxSuEjdyj4728wGd4xVNXg==
-    - secure: cMM9jqZOMeHX834qzV3iUxbNc1yKyjj2mViuE1OSHh8n1KE/ETs7LR6wvI8jHsyUX2xQbgyP00DksQh8Tott8DaSBglelrtc5WD46bgNyLvvxxl45hYXFfH8Ap4hGcgNcKOd96FY444R3a/PhR8QxvqMDEBHcOOG2SJozgjcXT97YPvy9+PK8cNvkXNHwGiBvSZS78zj3WR5o8TjMJNEGnws/6JJwJEBo+5XnUUv14q2zgtG+iYFPJ9oWfVwSF+wq1DQLHTtQtyZwKfiO1JsIdUYpXG9hmB2CcxKOaMp9+DQuFG3RzongnyQBre/8y5o0vzbEcp0LwyFOcZv2+fF5w==
-    - secure: at2OyV/+OUB5DnUV51V3Wl2buMEX5mme+OaXovyMJqDW+EPRz9PpvYBc6k7E4FWYW9+Z8c+4SpgkvxdlOTl3BZI6UJdJWFV70mnGijV64t/kttW7ew4CpfP4mPmVdtkRIaU7SWLlQQQhRO8S4VR88sWktzGF+5g3UJ7cLWFprh7ZAML67In+cvwEjkaC2RBCPn3oQJZB7e5wxzEep9DNWuzkQjgHRC2qnQJxca39wAvfY+xQywyvG16go7kPoDpEbluAN7NF0RMKUuaCAZUWiFrD+b8+hOFVMUGMsF2Nzk4koYeSXwBf2iPSyjPHfB/6c7N/HQyVBdvSUSxW2bEH+A==
-    - secure: WRi48s4HNhaLZ0WiD+ZLoX4Kjn26414EPvVyYNIDBP6a7kBiatPbXDO6qkjzue6JFUNUbPtfy9Bpa2FzkN9DxsqhKRWjuaIgItgFMZsDNtvU5xP66ExBdNgWrHrVVdpaBbwtIMqv8svaYQ0WsdTgEXtyXuA+40W1+YjSI+wIhviAcumPsB3D/+EXGqte8XbqnalFxftQmjFY9YsRprXt0UMLn5lEZflBl+nZQl2432531GvTM2B0B/CSkwzdxvjuCENuiqZ6DPiw1Ye3w8ZtmKphjYmdE7byqhO4MdtHGk5YmFQP+uEE9cbr9G/5jgbF4FDcsHkbjrZsmY7PYDp6qA==
-    #- secure: pUg48tjvDzag13UvxR8T+orIBA3Vg8sqvTRoZZYRHBU9uAJIiYSQi4e4x8614MVbIEzDNL9AfMkMaRxDEQWL7Wlw+jj/OihiZmN/WeadziHZkW/WlIefjOX0j3ntMKo/qnitUZujSGtK6ycFIsbrsk4f4P34IYbhCF7LPhLkC6jC74E6Q2htzBYj2nIfngkrCcqJVysCvOg8XBe1Xig9OFf6Yu+aPW6OGS5alft3/T/cdV5Efi5WTXdavDQDUgjvI+OLg6kOX+TAiQK27k89youhhZl3EdkwMRa7xEczw/HhQLYfIOrvJo9FRTRty9+V+wpg5+TDq6vkjek/iqC34w==
+  - 8.1
+  - 8.2
 
   matrix:
     - M1="111"
-    #- M2=two and three
 
 build:
  
