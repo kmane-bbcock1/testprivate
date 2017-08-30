@@ -77,7 +77,7 @@ jobs:
 #RUNSH      
   - name: ri-inrunSh
     type: runSh
-    allowPublicAccess: false
+    allowPublicAccess: true
     steps:
       - IN: ri-samplescriptprivate
      # versionName: testsha
