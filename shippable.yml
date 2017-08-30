@@ -18,7 +18,4 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE
-    - echo $foo
-    - echo $env1
-    - sleep 1m    
+    - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE  
