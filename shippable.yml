@@ -25,7 +25,7 @@ build:
     - ls -al
     - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE 
     - echo "test=$test" #test=b from proj setting encrypt
-    - echo "testsubs=testsubs" #testsubs=rc from subs setting encrypt
+    - echo "testsubs=$testsubs" #testsubs=rc from subs setting encrypt
 
 integrations:    
   notifications:
