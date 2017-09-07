@@ -7,7 +7,7 @@ git:
 # Version number
 node_js:
   - 8.1
-  - 8.2
+  #- 8.2
   #- 6.11
 
 env:
@@ -21,20 +21,8 @@ build:
     - ls -al
     - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE 
     
-  cache: true
 
-integrations:    
-  notifications:
-    - integrationName: slack 
-      type: slack
-      recipients:
-        - "#random" 
-        - "#rc-public" 
-        - "#rc-private"
-      on_start: always
-      on_success: always
-      on_failure: always 
-      on_cancel: always
+
        
     - integrationName: email         
       type: email        
@@ -58,13 +46,4 @@ integrations:
       on_failure: always 
       on_cancel: always
     
-    - integrationName: hipchat
-      type: hipchat
-      recipients: 
-        - '#rc-private'
-        - '#rc-public'
-        - '@shiptestrcow'
-      on_start: always
-      on_success: always   
-      on_failure: always
-      on_cancel: always
+ 
