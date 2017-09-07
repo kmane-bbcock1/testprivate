@@ -42,10 +42,3 @@ integrations:
       type: irc
       recipients:
         - "webchat.irchighway.net#irc-three"
-        - "webchat.irchighway.net#test-rc"
-      on_start: always
-      on_success: always      
-      on_failure: always 
-      on_cancel: always
-    
- 
