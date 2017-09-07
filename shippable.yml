@@ -23,7 +23,7 @@ build:
     
 
 
- integrations:
+integrations:    
   notifications:
   
     - integrationName: email         
