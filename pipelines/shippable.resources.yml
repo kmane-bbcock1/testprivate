@@ -42,7 +42,7 @@ resources:
     type: gitRepo
     integration: "github"
     pointer:
-      sourceName: "shiphitchcock1/sample-script"
+      sourceName: "bell-rc/ci-rc"
       branch: master
       #tags:
        # only:
@@ -56,7 +56,7 @@ resources:
     type: gitRepo
     integration: "github"
     pointer:
-      sourceName: "shiphitchcock1/testprivate"
+      sourceName: "bell-rc/testprivate"
       branch: master
       #tags:
        # only:
