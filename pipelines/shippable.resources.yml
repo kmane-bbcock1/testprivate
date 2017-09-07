@@ -42,7 +42,7 @@ resources:
     type: gitRepo
     integration: "github"
     pointer:
-      sourceName: "bell-rc/ci-rc"
+      sourceName: "bell-rc/testpublic"
       branch: master
       #tags:
        # only:
