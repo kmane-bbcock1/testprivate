@@ -11,6 +11,9 @@ node_js:
   #- 6.11
 
 env:
+  global:
+    - secure: AwwKvQ9dtNn/+RgJY7d5gn5bd+7ddRI60VA9eSqsnuT2AsUrJCf6jk7GmatjRhPGBDu1rKlKVzNJExDbAo6N8gZaEATPZRbU1fMbMvYow2hKKS97IoLrTd0niS9BRCFsNSs6IM7DkGWw8g24OtimTuH2RpGZdo2JE2jOXSU1RuTS3AH66FVQ/w/SxC4fB+qhKqt7yQ2WQ3TqC+BIYOuqIABE8r2nL10pA04Uo+OB2dUsKBiQweF6bx/OZM2pEVhEfF5dtdht0FAf0VulSOnavd7WJQio9Qhs/SeiSNptjqFl0rh4z/x4sTxOA+oSiFBal1JB+8dgKYfFg5q1wHPekA== #test=b
+  
   matrix:
     - M1="111"
 
@@ -20,7 +23,7 @@ build:
     - ps -eax
     - ls -al
     - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE 
-    
+    - echo "test=$test"
 
 
 integrations:    
