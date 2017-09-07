@@ -11,10 +11,6 @@ node_js:
   #- 6.11
 
 env:
-  global:
-    - secure: ytq0V7JPRv1Z8foeK8LcTNBDZhcRP91Iou/MFNnOZ/ziUkPHX4VTcffIWm7mNiLDFujZ/ufNNJxDr757RXH1Lo1tJPm2msTEj96mdhAA2D7Er690aPLfskLU5P0HTmGlop2Ee7FVJC++wAs5pHC5AIPDBNjq7SzBT+UO/5A6YK6LD655BbzVLwt7KIcmfySJSlKvWDHJ5wGXtOt+rArdV2LR1eq1TvfIA74wdlOvfpFd6Huu4Cjmci2xc8xVMCXXO+z4XcDMMP0wdOFXD7o5l965zpEPrx1aB4itMba659jvSCu9QFSL6kxe+NxqDJ8LYRr1Ld/i3f304WZPA4ixiQ== #testsubs=rc from subs setting encrypt
-    - secure: AwwKvQ9dtNn/+RgJY7d5gn5bd+7ddRI60VA9eSqsnuT2AsUrJCf6jk7GmatjRhPGBDu1rKlKVzNJExDbAo6N8gZaEATPZRbU1fMbMvYow2hKKS97IoLrTd0niS9BRCFsNSs6IM7DkGWw8g24OtimTuH2RpGZdo2JE2jOXSU1RuTS3AH66FVQ/w/SxC4fB+qhKqt7yQ2WQ3TqC+BIYOuqIABE8r2nL10pA04Uo+OB2dUsKBiQweF6bx/OZM2pEVhEfF5dtdht0FAf0VulSOnavd7WJQio9Qhs/SeiSNptjqFl0rh4z/x4sTxOA+oSiFBal1JB+8dgKYfFg5q1wHPekA== #test=b from proj setting encrypt
-  
   matrix:
     - M1="111"
 
